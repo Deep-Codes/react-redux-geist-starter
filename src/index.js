@@ -5,11 +5,15 @@ import App from './App';
 import { store } from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
+import { GeistProvider, CssBaseline } from '@geist-ui/react';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <GeistProvider>
+        <CssBaseline />
+        <App />
+      </GeistProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
